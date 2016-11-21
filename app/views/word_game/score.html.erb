@@ -1,0 +1,14 @@
+<!-- <h1>WordGame#score</h1>
+<p>Find me in app/views/word_game/score.html.erb</p> -->
+
+<% #result = run_game(attempt, grid, start_time, end_time) %>
+
+<% #@end_time = Time.now %>
+
+<p> Your word: <%= @attempt %> </p>
+<p>Time Taken to answer: <%= @result[:time] %> </p>
+<p>Translation: <%= @result[:translation] %> </p>
+<p>Your score: <%= @result[:score] %> </p>
+<p>Message: <%= @result[:message] %> </p>
+<%= link_to "Return to Home!", root_path %>
+<%= link_to "Play again!", game_path %>

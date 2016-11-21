@@ -1,0 +1,22 @@
+<!-- <h1>WordGame#game</h1>
+<p>Find me in app/views/word_game/game.html.erb</p>
+ -->
+<h1>******** Welcome to the longest word-game !********</h1>
+<h2>Here is your grid :</h2>
+<% #grid = generate_grid(9) %>
+<%= @grid.join(" ") %>
+
+<h2>What's your best shot ?</h2>
+
+<% #@start_time = Time.now %>
+
+<form action="/score" method="get">
+  <input type="hidden" name=start_time value="<%= @start_time %>" >
+  <input type="text" name="attempt" placeholder="Try your best!">
+  <input type="hidden" name="grid" value="<%= @grid %>">
+  <input type="submit">
+</form>
+
+<!-- attempt = gets.chomp -->
+
+<% #@end_time = Time.now %>
